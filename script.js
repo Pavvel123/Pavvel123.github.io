@@ -437,6 +437,8 @@ const diffMs = todayDate - refDate;
 const diffWeeks = Math.floor(diffMs / (7 * 24 * 60 * 60 * 1000));
 const currentWeekLetter = (diffWeeks % 2 === 0) ? "A" : "B";
 
+document.getElementById("updateParagraph").innerHTML = `Aktualny tydzień: ${currentWeekLetter}<br>Ostatnia aktualizacja: 21 lutego 2025`;
+
 // --- Funkcje pomocnicze ---
 function formatTimeRange(timeRange) {
   return timeRange.split(" - ").map(t => t.startsWith("0") ? t.slice(1) : t).join(" - ");
@@ -461,7 +463,6 @@ function buildDesktopTimetable() {
   const mainHeader = document.createElement("tr");
   const timeTh = document.createElement("th");
   timeTh.rowSpan = 2;
-  timeTh.textContent = "Czas";
   mainHeader.appendChild(timeTh);
 
   timetable.forEach(dayObj => {
@@ -558,7 +559,6 @@ function buildMobileTimetable(selectedDay, selectedWeek) {
 
   const headerRow = document.createElement("tr");
   const thTime = document.createElement("th");
-  thTime.textContent = "Czas";
   const thInfo = document.createElement("th");
   thInfo.textContent = `${selectedDay} (Tydzień ${selectedWeek})`;
   headerRow.appendChild(thTime);
@@ -622,18 +622,8 @@ function updateMobileView() {
   updateSelectBackground(weekSelect, currentWeekLetter);
 }
 
-// Ustawienie nasłuchiwania zdarzeń
-daySelect.addEventListener("change", updateMobileView);
-weekSelect.addEventListener("change", updateMobileView);
-
-// Dodanie przycisku "Aktualny termin" do automatycznego ustawienia
-const selectActualButton = document.getElementById("selectActual");
-if (currentDay == "Sobota" || currentDay == "Niedziela")
+function setMobileNav()
 {
-  selectActualButton.innerText="Plan na najbliższy poniedziałek";
-}
-
-selectActualButton.addEventListener("click", () => {
   if (currentDay == "Sobota" || currentDay == "Niedziela")
   {
     selectActualButton.innerText="Plan na najbliższy poniedziałek";
@@ -652,6 +642,18 @@ selectActualButton.addEventListener("click", () => {
     daySelect.value = currentDay;
     weekSelect.value = currentWeekLetter;
   }
+}
+
+// Ustawienie nasłuchiwania zdarzeń
+daySelect.addEventListener("change", updateMobileView);
+weekSelect.addEventListener("change", updateMobileView);
+
+// Dodanie przycisku "Aktualny termin" do automatycznego ustawienia
+const selectActualButton = document.getElementById("selectActual");
+setMobileNav();
+
+selectActualButton.addEventListener("click", () => {
+  setMobileNav();
   updateMobileView();
 });
 
