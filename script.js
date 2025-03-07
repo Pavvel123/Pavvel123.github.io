@@ -573,6 +573,7 @@ function buildMobileTimetable(selectedDay, selectedWeek) {
     const row = document.createElement("tr");
     const timeCell = document.createElement("td");
     timeCell.textContent = formatTimeRange(timeSlot);
+    timeCell.style.minWidth = "100px";
     row.appendChild(timeCell);
 
     const classesAtTime = dayData.classes.filter(cls => {
