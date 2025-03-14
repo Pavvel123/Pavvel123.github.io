@@ -3,31 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>University Timetable</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Plan zajęć PG</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
   </style>
 </head>
 <body>
-  <h1>My University Timetable</h1>
-  <table id="timetable">
-    <thead>
-      <tr id="mainHeader"></tr>
-      <tr id="subHeader"></tr>
-    </thead>
-    <tbody id="tableBody"></tbody>
-  </table>
+  <h1>Plan zajęć PG</h1>
+
+  <!-- Desktop view container -->
+  <div class="desktop-view">
+    <table id="desktopTimetable">
+      <!-- Desktop table will be built by JavaScript -->
+    </table>
+  </div>
+
+  <!-- Mobile view container -->
+  <div class="mobile-view">
+    <nav>
+        <div class="select_box">
+            <label for="daySelect">Wybierz dzień:</label>
+            <br>
+            <select id="daySelect">
+              <option value="Poniedziałek">Poniedziałek</option>
+              <option value="Wtorek">Wtorek</option>
+              <option value="Środa">Środa</option>
+              <option value="Czwartek">Czwartek</option>
+              <option value="Piątek">Piątek</option>
+            </select>
+        </div>
+        <div class="select_box">
+            <label for="weekSelect">Wybierz tydzień:</label>
+            <br>
+            <select id="weekSelect">
+              <option value="A">Tydzień A</option>
+              <option value="B">Tydzień B</option>
+            </select>
+        </div>
+        <div class="select_box">
+            <button id="selectActual">Plan na dzisiaj</button>
+        </div>
+    </nav>
+    <table id="mobileTimetable">
+      <!-- Tabela mobilna zostanie wygenerowana przez JS -->
+    </table>
+  </div>
+
   <script type="module" src="script.js"></script>
 </body>
 </html>
