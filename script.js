@@ -444,6 +444,18 @@ function formatTimeRange(timeRange) {
   return timeRange.split(" - ").map(t => t.startsWith("0") ? t.slice(1) : t).join(" - ");
 }
 
+function isTimeSlotActive(timeRange) {
+  const [startStr, endStr] = timeRange.split(" - ");
+  const [startHour, startMinute] = startStr.split(":").map(Number);
+  const [endHour, endMinute] = endStr.split(":").map(Number);
+  const now = new Date();
+  // Create Date objects for today with the start and end times
+  const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute);
+  const adjustedStartTime = new Date(startTime.getTime() - 15 * 60000); // 15 minutes earlier
+  const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute);
+  return now >= adjustedStartTime && now < endTime;
+}
+
 function styleType(type, isGreyedOut) {
   if (isGreyedOut) return `<span style="color:rgb(210, 210, 210);">[${type}]</span>`;
   switch(type) {
@@ -522,29 +534,33 @@ function buildDesktopTimetable() {
         }
       });
 
-      if (classesAB.length > 0) {
-        const cell = document.createElement("td");
-        cell.colSpan = 2;
-        cell.innerHTML = classesAB.join("<br><br>");
-        if (dayObj.day === currentDay) {
-          cell.style.backgroundColor = "lightgreen";
-        }
-        row.appendChild(cell);
-      } else {
-        const cellA = document.createElement("td");
-        cellA.innerHTML = classesA.join("<br><br>") || "";
-        if (dayObj.day === currentDay && currentWeekLetter === "A") {
-          cellA.style.backgroundColor = "lightgreen";
-        }
-        const cellB = document.createElement("td");
-        cellB.innerHTML = classesB.join("<br><br>") || "";
-        if (dayObj.day === currentDay && currentWeekLetter === "B") {
-          cellB.style.backgroundColor = "lightgreen";
-        }
-        row.appendChild(cellA);
-        row.appendChild(cellB);
-      }
+      // Inside buildDesktopTimetable() when processing each day for a given timeSlot
+if (classesAB.length > 0) {
+  const cell = document.createElement("td");
+  cell.colSpan = 2;
+  cell.innerHTML = classesAB.join("<br><br>");
+  // Highlight only if this cell belongs to today's day and the time slot is active
+  if (dayObj.day === currentDay && isTimeSlotActive(timeSlot)) {
+    cell.style.outline = "3px solid orange";
+  }
+  row.appendChild(cell);
+} else {
+  const cellA = document.createElement("td");
+  cellA.innerHTML = classesA.join("<br><br>") || "";
+  if (dayObj.day === currentDay && currentWeekLetter === "A" && isTimeSlotActive(timeSlot)) {
+    cellA.style.outline = "3px solid orange";
+  }
+  const cellB = document.createElement("td");
+  cellB.innerHTML = classesB.join("<br><br>") || "";
+  if (dayObj.day === currentDay && currentWeekLetter === "B" && isTimeSlotActive(timeSlot)) {
+    cellB.style.outline = "3px solid orange";
+  }
+  row.appendChild(cellA);
+  row.appendChild(cellB);
+}
+
     });
+    
     desktopTable.appendChild(row);
   });
 }
@@ -596,6 +612,11 @@ function buildMobileTimetable(selectedDay, selectedWeek) {
     const infoCell = document.createElement("td");
     infoCell.innerHTML = contentArray.join("<br><br>");
     row.appendChild(infoCell);
+  
+    // Inside buildMobileTimetable() after constructing a row for a given timeSlot:
+if (selectedDay === currentDay && selectedWeek == currentWeekLetter && isTimeSlotActive(timeSlot)) {
+  row.style.outline = "3px solid orange";
+}
     mobileTable.appendChild(row);
   });
 }
