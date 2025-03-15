@@ -424,7 +424,7 @@ const timetable = [
       ]
     }
   ];
-  
+
 
 // Oblicz aktualny dzień i tydzień
 const todayDate = new Date();
@@ -443,7 +443,7 @@ function formatTimeRange(timeRange) {
 }
 
 function styleType(type, isGreyedOut) {
-  if (isGreyedOut) return `<span style="color:rgb(200, 200, 200);">[${type}]</span>`;
+  if (isGreyedOut) return `<span style="color:rgb(210, 210, 210);">[${type}]</span>`;
   switch(type) {
     case "W": return `<span style="color: white; background-color: blue; padding: 1px;">[W]</span>`;
     case "L": return `<span style="color: white; background-color: purple; padding: 1px;">[L]</span>`;
@@ -504,14 +504,14 @@ function buildDesktopTimetable() {
       classes.forEach(cls => {
         const isGreyedOut = (cls.StartDate && cls.StartDate > todayDate.toISOString().split("T")[0]) ||
                              (cls.EndDate && cls.EndDate < todayDate.toISOString().split("T")[0]);
-        let content = `${cls.room}<br><strong>${styleType(cls.type, isGreyedOut)} ${cls.subject}</strong><br>${cls.teacher}`;
+        let content = `${cls.room}<br>${styleType(cls.type, isGreyedOut)} <strong>${cls.subject}</strong><br>${cls.teacher}`;
         if (cls.StartDate || cls.EndDate) {
           let dateInfo = [];
           if (cls.StartDate) dateInfo.push(`od ${cls.StartDate}`);
           if (cls.EndDate) dateInfo.push(`do ${cls.EndDate}`);
           content += `<br><em>${dateInfo.join(" | ")}</em>`;
         }
-        if (isGreyedOut) content = `<span style="color:rgb(200, 200, 200);">${content}</span>`;
+        if (isGreyedOut) content = `<span style="color:rgb(210, 210, 210);">${content}</span>`;
         if (cls.week === "AB") {
           classesAB.push(content);
         } else if (cls.week === "A") {
@@ -582,14 +582,14 @@ function buildMobileTimetable(selectedDay, selectedWeek) {
     classesAtTime.forEach(cls => {
       const isGreyedOut = (cls.StartDate && cls.StartDate > todayDate.toISOString().split("T")[0]) ||
                            (cls.EndDate && cls.EndDate < todayDate.toISOString().split("T")[0]);
-      let content = `${cls.room}<br><strong>${styleType(cls.type, isGreyedOut)} ${cls.subject}</strong><br>${cls.teacher}`;
+      let content = `${cls.room}<br>${styleType(cls.type, isGreyedOut)} <strong>${cls.subject}</strong><br>${cls.teacher}`;
       if (cls.StartDate || cls.EndDate) {
         let dateInfo = [];
         if (cls.StartDate) dateInfo.push(`od ${cls.StartDate}`);
         if (cls.EndDate) dateInfo.push(`do ${cls.EndDate}`);
         content += `<br><em>${dateInfo.join(" | ")}</em>`;
       }
-      if (isGreyedOut) content = `<span style="color:rgb(200, 200, 200);">${content}</span>`;
+      if (isGreyedOut) content = `<span style="color:rgb(210, 210, 210);">${content}</span>`;
       contentArray.push(content);
     });
     const infoCell = document.createElement("td");
@@ -628,9 +628,30 @@ weekSelect.addEventListener("change", updateMobileView);
 
 // Dodanie przycisku "Aktualny termin" do automatycznego ustawienia
 const selectActualButton = document.getElementById("selectActual");
+if (currentDay == "Sobota" || currentDay == "Niedziela")
+{
+  selectActualButton.innerText="Plan na najbliższy poniedziałek";
+}
+
 selectActualButton.addEventListener("click", () => {
-  daySelect.value = currentDay;
-  weekSelect.value = currentWeekLetter;
+  if (currentDay == "Sobota" || currentDay == "Niedziela")
+  {
+    selectActualButton.innerText="Plan na najbliższy poniedziałek";
+    daySelect.value = "Poniedziałek";
+    if (currentWeekLetter == "A")
+    {
+      weekSelect.value = "B";
+    }
+    else
+    {
+      weekSelect.value = "A";
+    }
+  }
+  else
+  {
+    daySelect.value = currentDay;
+    weekSelect.value = currentWeekLetter;
+  }
   updateMobileView();
 });
 
