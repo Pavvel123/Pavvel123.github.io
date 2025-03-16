@@ -1,31 +1,21 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-h1
-{
+h1{
     text-align: center;
 }
-
-.select_box
-{
+.select_box{
     margin: 20px;
     float: left;
     vertical-align: middle;
 }
-
-nav 
-{
+nav {
     text-align: center;
     width: 100%;
 }
-
-select, button
-{
+select, button{
     font-size: large;
 }
-
-/* Common table styles */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -41,17 +31,12 @@ th, td {
 th {
   background-color: #f4f4f4;
 }
-
-/* Desktop view: show full timetable */
 .desktop-view {
   display: block;
 }
-/* Mobile view: hidden by default */
 .mobile-view {
   display: none;
 }
-
-/* Responsive break: for narrow screens (e.g. smartphones) */
 @media screen and (max-width: 768px) {
   .desktop-view {
     display: none;
