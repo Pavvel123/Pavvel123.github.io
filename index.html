@@ -1,51 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <title>Plan zajęć PG</title>
-  <style>
-  </style>
+  <title>Plan zajęć PG — semestr piąty</title>
 </head>
 <body>
-  <h1>Plan zajęć PG</h1>
-  <h3>semestr piąty</h3>
-  <div class="desktop-view">
-    <table id="desktopTimetable">
-    </table>
+  <div class="app">
+    <header>
+      <h1>Plan zajęć PG</h1>
+      <h3>semestr piąty</h3>
+    </header>
+    <div class="controls">
+      <label class="small">Tydzień</label>
+      <select id="weekSelect" class="week-select"></select>
+      <label class="small">Dzień</label>
+      <select id="daySelect" class="day-select"></select>
+      <button id="todayBtn" class="btn small">Plan na dzisiaj</button>
+    </div>
+
+    <main>
+      <section class="timetable" id="timetable">
+        <div class="times" id="timesCol"></div>
+      </section>
+      <footer>
+        Ostatnia aktualizacja: 26 września 2025 roku
+      </footer>
+    </main>
   </div>
-  <div class="mobile-view">
-    <nav>
-        <div class="select_box">
-            <label for="daySelect">Wybierz dzień:</label>
-            <br>
-            <select id="daySelect">
-              <option value="Poniedziałek">Poniedziałek</option>
-              <option value="Wtorek">Wtorek</option>
-              <option value="Środa">Środa</option>
-              <option value="Czwartek">Czwartek</option>
-              <option value="Piątek">Piątek</option>
-            </select>
-        </div>
-        <div class="select_box">
-            <label for="weekSelect">Wybierz tydzień:</label>
-            <br>
-            <select id="weekSelect">
-              <option value="A">Tydzień A</option>
-              <option value="B">Tydzień B</option>
-            </select>
-        </div>
-        <div class="select_box">
-            <button id="selectActual">Plan na dzisiaj</button>
-        </div>
-    </nav>
-    <table id="mobileTimetable">
-    </table>
-  </div>
-  <footer>
-    <p id="updateParagraph"></p>
-  </footer>
   <script src="script-min.js"></script>
 </body>
 </html>
