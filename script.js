@@ -1,683 +1,234 @@
-const timetable = [
-    {
-      day: "Poniedziałek",
-      classes: [
-        {
-          time: "07:15 - 08:00",
-        },
-        {
-          time: "08:15 - 09:00",
-        },
-        {
-          time: "09:15 - 10:00",
-          subject: "Metody numeryczne",
-          room: "EA 507",
-          teacher: "dr inż. Piotr Sypek",
-          type: "L",
-          week: "A"
-        },
-        {
-          time: "10:15 - 11:00",
-          subject: "Metody numeryczne",
-          room: "EA 507",
-          teacher: "dr inż. Piotr Sypek",
-          type: "L",
-          week: "A"
-        },
-        {
-          time: "11:15 - 12:00",
-          subject: "Przetwarzanie rozproszone",
-          room: "EA 504",
-          teacher: "mgr Anna Domagalska",
-          type: "P",
-          week: "A"
-        },
-        {
-          time: "12:15 - 13:00",
-          subject: "Przetwarzanie rozproszone",
-          room: "EA 504",
-          teacher: "mgr Anna Domagalska",
-          type: "P",
-          week: "A"
-        },
-        {
-          time: "13:15 - 14:00",
-          subject: "Systemy wbudowane i mikroprocesory",
-          room: "NE AUD1L",
-          teacher: "dr inż. Krzysztof Bikonis",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-14"
-        },
-        {
-          time: "14:15 - 15:00",
-          subject: "Systemy wbudowane i mikroprocesory",
-          room: "NE AUD1L",
-          teacher: "dr inż. Maciej Kokot",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-14"
-        },
-        {
-          time: "15:15 - 16:00",
-          subject: "Wprowadzenie do cyberbezpieczeństwa",
-          room: "NE AUD1L",
-          teacher: "dr inż. Wojciech Gumiński",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-14"
-        },
-        {
-          time: "16:15 - 17:00",
-          subject: "Wprowadzenie do cyberbezpieczeństwa",
-          room: "NE AUD1L",
-          teacher: "dr inż. Wojciech Gumiński",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-14"
-        },
-        {
-          time: "17:15 - 18:00",
-        },
-        {
-          time: "18:15 - 19:00",
-          subject: "Metody probabilistyczne w informatyce",
-          room: "NE 205",
-          teacher: "dr inż. Maciej Sac",
-          type: "Ć",
-          week: "AB"
-        },
-      ]
-    },
-    {
-      day: "Wtorek",
-      classes: [
-        {
-          time: "07:15 - 08:00",
-        },
-        {
-          time: "08:15 - 09:00",
-        },
-        {
-          time: "09:15 - 10:00",
-        },
-        {
-          time: "10:15 - 11:00",
-        },
-        {
-          time: "11:15 - 12:00",
-          subject: "Sztuczna inteligencja",
-          room: "NE AUD1P",
-          teacher: "dr hab. Julian Szymański",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "12:15 - 13:00",
-          subject: "Sztuczna inteligencja",
-          room: "NE AUD1P",
-          teacher: "dr hab. Julian Szymański",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "13:15 - 14:00",
-          subject: "Sztuczna inteligencja",
-          room: "EA 507",
-          teacher: "mgr inż. Szymon Olewniczak",
-          type: "P",
-          week: "AB",
-          StartDate: "2025-04-29"
-        },
-        {
-          time: "14:15 - 15:00",
-          subject: "Sztuczna inteligencja",
-          room: "EA 507",
-          teacher: "mgr inż. Szymon Olewniczak",
-          type: "P",
-          week: "AB",
-          StartDate: "2025-04-29"
-        },
-        {
-          time: "15:15 - 16:00",
-        },
-        {
-          time: "16:15 - 17:00",
-        },
-        {
-          time: "17:15 - 18:00",
-          subject: "System operacyjny MAC OS X i iOS",
-          room: "zajęcia zdalne",
-          teacher: "mgr inż. Tomasz Idzi",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-15"
-        },
-        {
-          time: "18:15 - 19:00",
-          subject: "System operacyjny MAC OS X i iOS",
-          room: "zajęcia zdalne",
-          teacher: "mgr inż. Tomasz Idzi",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-15"
-        },
-        {
-          time: "19:15 - 20:00",
-          subject: "System operacyjny MAC OS X i iOS",
-          room: "zajęcia zdalne",
-          teacher: "mgr inż. Tomasz Idzi",
-          type: "L",
-          week: "AB",
-          EndDate: "2025-04-15"
-        },
-        {
-          time: "20:15 - 21:00",
-          subject: "System operacyjny MAC OS X i iOS",
-          room: "zajęcia zdalne",
-          teacher: "mgr inż. Tomasz Idzi",
-          type: "L",
-          week: "AB",
-          EndDate: "2025-04-15"
-        },
-      ]
-    },
-    {
-      day: "Środa",
-      classes: [
-        {
-          time: "07:15 - 08:00",
-        },
-        {
-          time: "08:15 - 09:00",
-        },
-        {
-          time: "09:15 - 10:00",
-          subject: "Systemy wbudowane i mikroprocesory",
-          room: "EA 438",
-          teacher: "dr inż. Krzysztof Bikonis",
-          type: "L",
-          week: "AB",
-        },
-        {
-          time: "10:15 - 11:00",
-          subject: "Systemy wbudowane i mikroprocesory",
-          room: "EA 438",
-          teacher: "dr inż. Krzysztof Bikonis",
-          type: "L",
-          week: "AB",
-        },
-        {
-          time: "11:15 - 12:00",
-          subject: "Platformy technologiczne",
-          room: "EA 507",
-          teacher: "dr inż. Wojciech Siwicki",
-          type: "L",
-          week: "AB",
-        },
-        {
-          time: "12:15 - 13:00",
-          subject: "Platformy technologiczne",
-          room: "EA 507",
-          teacher: "dr inż. Wojciech Siwicki",
-          type: "L",
-          week: "AB",
-        },
-        {
-          time: "13:15 - 14:00",
-          subject: "Język angielski III",
-          room: "Gmach B 313",
-          teacher: "mgr Ewa Rogala",
-          type: "Ć",
-          week: "AB",
-        },
-        {
-          time: "14:15 - 15:00",
-          subject: "Język angielski III",
-          room: "Gmach B 313",
-          teacher: "mgr Ewa Rogala",
-          type: "Ć",
-          week: "AB",
-        },
-        {
-          time: "15:15 - 16:00",
-          subject: "Metody probabilistyczne w informatyce",
-          room: "NE AUD1L",
-          teacher: "dr hab. Jerzy Konorski",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "16:15 - 17:00",
-          subject: "Metody probabilistyczne w informatyce",
-          room: "NE AUD1L",
-          teacher: "dr hab. Jerzy Konorski",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "17:15 - 18:00",
-          subject: "Wprowadzenie do cyberbezpieczeństwa",
-          room: "NE 207",
-          teacher: "dr inż. Krzysztof Gierłowski",
-          type: "P",
-          week: "AB",
-          StartDate: "2025-04-30"
-        },
-        {
-          time: "18:15 - 19:00",
-          subject: "Wprowadzenie do cyberbezpieczeństwa",
-          room: "NE 207",
-          teacher: "dr inż. Krzysztof Gierłowski",
-          type: "P",
-          week: "AB",
-          StartDate: "2025-04-30"
-        },
-      ]
-    },
-    {
-      day: "Czwartek",
-      classes: [
-        {
-          time: "07:15 - 08:00",
-        },
-        {
-          time: "08:15 - 09:00",
-        },
-        {
-          time: "09:15 - 10:00",
-        },
-        {
-          time: "10:15 - 11:00",
-          subject: "Platformy technologiczne",
-          room: "EA AUD2",
-          teacher: "dr inż. Krzysztof Cwalina",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-17"
-        },
-        {
-          time: "11:15 - 12:00",
-          subject: "Platformy technologiczne",
-          room: "EA AUD2",
-          teacher: "dr inż. Krzysztof Cwalina",
-          type: "W",
-          week: "AB",
-          EndDate: "2025-04-17"
-        },
-        {
-          time: "12:15 - 13:00",
-          subject: "Przetwarzanie rozproszone",
-          room: "EA AUD2",
-          teacher: "dr inż. Mariusz Matuszek",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "13:15 - 14:00",
-        },
-        {
-          time: "14:15 - 15:00",
-        },
-        {
-          time: "15:15 - 16:00",
-        },
-        {
-          time: "16:15 - 17:00",
-          subject: "Przetwarzanie rozproszone",
-          room: "EA 527",
-          teacher: "mgr inż. Michał Kościowski",
-          type: "L",
-          week: "AB",
-        },
-        {
-          time: "17:15 - 18:00",
-          subject: "Przetwarzanie rozproszone",
-          room: "EA 527",
-          teacher: "mgr inż. Michał Kościowski",
-          type: "L",
-          week: "AB",
-        },
-      ]
-    },
-    {
-      day: "Piątek",
-      classes: [
-        {
-          time: "07:15 - 08:00",
-        },
-        {
-          time: "08:15 - 09:00",
-        },
-        {
-          time: "09:15 - 10:00",
-          subject: "Sieci komputerowe",
-          room: "NE AUD1P",
-          teacher: "dr inż. Krzysztof Nowicki",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "10:15 - 11:00",
-          subject: "Sieci komputerowe",
-          room: "NE AUD1P",
-          teacher: "dr inż. Krzysztof Nowicki",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "11:15 - 12:00",
-          subject: "Metody numeryczne",
-          room: "NE AUD1L",
-          teacher: "dr hab. Grzegorz Fotyga",
-          type: "W",
-          week: "AB",
-        },
-        {
-          time: "12:15 - 13:00",
-          subject: "Sztuczna inteligencja",
-          room: "EA 527",
-          teacher: "mgr inż. Szymon Olewniczak",
-          type: "L",
-          week: "A",
-        },
-        {
-          time: "13:15 - 14:00",
-          subject: "Sztuczna inteligencja",
-          room: "EA 527",
-          teacher: "mgr inż. Szymon Olewniczak",
-          type: "L",
-          week: "A",
-        },
-        {
-          time: "14:15 - 15:00",
-          subject: "Metody numeryczne",
-          room: "EA 507",
-          teacher: "dr inż. Piotr Sypek",
-          type: "P",
-          week: "A"
-        },
-        {
-          time: "15:15 - 16:00",
-          subject: "Metody numeryczne",
-          room: "EA 507",
-          teacher: "dr inż. Piotr Sypek",
-          type: "P",
-          week: "A"
-        },
-        {
-          time: "16:15 - 17:00",
-          subject: "Metody probabilistyczne w informatyce",
-          room: "NE 239",
-          teacher: "dr hab. Jacek Rak",
-          type: "L",
-          week: "A"
-        },
-        {
-          time: "17:15 - 18:00",
-          subject: "Metody probabilistyczne w informatyce",
-          room: "NE 239",
-          teacher: "dr hab. Jacek Rak",
-          type: "L",
-          week: "A"
-        },
-      ]
+// Konfiguracja
+    const SEMESTER_START = '2025-09-29'; // poniedziałek
+    const SEMESTER_WEEKS = 21;
+
+    // Helpers
+    function range(from,to,step=1){const a=[];for(let i=from;i<=to;i+=step)a.push(i);return a}
+    function fmtDM(d){
+      const day = String(d.getDate());
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      return `${day}.${month}`;
     }
-  ];
+    function weekDateRange(week){const start=new Date(SEMESTER_START);start.setDate(start.getDate() + (week-1)*7);const end=new Date(start);end.setDate(end.getDate()+6);return {start,end}}
+    function normalizeToStudyDay(date){const d=new Date(date);const dow=d.getDay();if(dow===6){d.setDate(d.getDate()+2);return d}if(dow===0){d.setDate(d.getDate()+1);return d}return d}
+    function weekNumberForDate(date){const start=new Date(SEMESTER_START);const d=new Date(date.getFullYear(),date.getMonth(),date.getDate());const diffMs=d-new Date(start.getFullYear(),start.getMonth(),start.getDate());const diffDays=Math.floor(diffMs/(1000*60*60*24));let week=Math.floor(diffDays/7)+1;if(week<1)week=1;if(week>SEMESTER_WEEKS)week=SEMESTER_WEEKS;return week}
+
+    const EVENTS=[
+        //backgrounds
+      {id:'XBG',title:'Obowiązuje plan z wtorku!',day:3,start:'07:30',end:'22:00',place:'',teacher:'',color:'#007413ff',weeks:[7]},
+      {id:'XBG',title:'Obowiązuje plan z wtorku!',day:4,start:'07:30',end:'22:00',place:'',teacher:'',color:'#007413ff',weeks:[15]},
 
 
-// Oblicz aktualny dzień i tydzień
-const todayDate = new Date();
-const weekdayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-const currentDay = weekdayNames[todayDate.getDay()];
+      {id:'PG',title:'Projekt grupowy I',day:1,start:'09:15',end:'11:00',place:'AUD.NOV',teacher:'dr inż. Sławomir Gajewski',color:'#ffa672ff',weeks:[2,3,4,5,6,7,8,9,10,11,12,15,16,17,18]},
+      {id:'IO',title:'Inżynieria oprogramowania',day:1,start:'11:15',end:'13:00',place:'NE AUD1P',teacher:'dr inż. Aleksander Jarzębowicz',color:'#7274ffff',weeks:[2,3,4,5,6,7,8,9,10,11,12,15,16,17,18]},
+      {id:'ASW',title:'Aplikacje systemów wbudowanych',day:1,start:'13:15',end:'15:00',place:'NE AUD1P',teacher:'dr inż. Krzysztof Bikonis',color:'#7274ffff',weeks:[2,3,4,5,6,7,8,9,10,11,12,15,16,17,18]},
+      {id:'HD',title:'Hurtownie danych',day:1,start:'17:15',end:'19:00',place:'Zajęcia zdalne',teacher:'dr inż. Teresa Zawadzka',color:'#7274ffff',weeks:[2,3,4,5,6,7,8,9]},
 
-// Załóżmy, że tydzień A zaczyna się 24.02.2025
-const refDate = new Date("2025-02-24");
-const diffMs = todayDate - refDate;
-const diffWeeks = Math.floor(diffMs / (7 * 24 * 60 * 60 * 1000));
-const currentWeekLetter = (diffWeeks % 2 === 0) ? "A" : "B";
+      {id:'SKL',title:'Sieci komputerowe - laboratorium',day:2,start:'11:15',end:'13:00',place:'EA 204',teacher:'mgr inż. Jakub Grochowski',color:'#b472ffff',weeks:[2,4,6,8,10,12,16,18]},
+      {id:'AUI',title:'Architektury usług internetowych',day:2,start:'11:15',end:'13:00',place:'WP 111',teacher:'mgr Anna Domagalska',color:'#b472ffff',weeks:[3,5,9,11,17]},
+      {id:'ASW',title:'Aplikacje systemów wbudowanych',day:2,start:'13:15',end:'15:00',place:'EA 438',teacher:'dr inż. Krzysztof Bikonis',color:'#b472ffff',weeks:[2,3,4,5,6,8,9,10,11,12,16,17,18]},
+      {id:'BE',title:'Biznes elektroniczny',day:2,start:'15:15',end:'17:00',place:'NE AUD1L',teacher:'dr inż. Andrzej Sobecki',color:'#7274ffff',weeks:[2,3,4,5,6,8,9]},
+      {id:'BE',title:'Biznes elektroniczny',day:2,start:'17:15',end:'19:00',place:'WP 121',teacher:'dr inż. Andrzej Sobecki',color:'#ffa672ff',weeks:[2,4,6,8,10,12,16,18]},
 
-document.getElementById("updateParagraph").innerHTML = `Aktualny tydzień: ${currentWeekLetter}<br>Ostatnia aktualizacja: 21 lutego 2025`;
+      {id:'WI',title:'Wizualizacja informacji',day:3,start:'08:15',end:'10:00',place:'EA 401',teacher:'mgr inż. Jerzy Redlarski',color:'#ffa672ff',weeks:[10,11,12,15,16,17,18]},
+      {id:'JA',title:'Język angielski IV',day:3,start:'11:15',end:'13:00',place:'Gmach B 313',teacher:'mgr Ewa Rogala',color:'#ff2bedff',weeks:[1,2,3,4,5,6,8,9,10,11,12,15,16,17,18]},
+      {id:'SAI',title:'Społeczne aspekty informatyki',day:3,start:'13:15',end:'15:00',place:'NE AUD1P',teacher:'dr inż. Jakub Miler',color:'#7274ffff',weeks:[1,2,3,4,5,6,8,9]},
+      {id:'SIP',title:'Systemy informacji przestrzennej',day:3,start:'13:15',end:'15:00',place:'EA 643',teacher:'dr hab. Zbigniew Łubniewski',color:'#b472ffff',weeks:[10,11,12,15,16,17,18]},
+      {id:'SIP',title:'Systemy informacji przestrzennej',day:3,start:'15:15',end:'17:00',place:'NE AUD1L',teacher:'dr hab. Marcin Kulawiak',color:'#7274ffff',weeks:[1,2,3,4,5,6,8,9]},
+      {id:'HD',title:'Hurtownie danych',day:3,start:'17:15',end:'19:00',place:'EA AUD2',teacher:'dr inż. Teresa Zawadzka',color:'#7274ffff',weeks:[1]},
+      {id:'PG',title:'Projekt grupowy I',day:3,start:'19:15',end:'21:00',place:'NE 205',teacher:'dr inż. Krzysztof Gierłowski',color:'#ffa672ff',weeks:[1,2,3,4,5,6,8,9,10,11,12,15,16,17,18]},
 
-// --- Funkcje pomocnicze ---
-function formatTimeRange(timeRange) {
-  return timeRange.split(" - ").map(t => t.startsWith("0") ? t.slice(1) : t).join(" - ");
-}
+      {id:'SAI',title:'Społeczne aspekty informatyki',day:4,start:'08:15',end:'11:00',place:'NE 209',teacher:'dr inż. Jakub Miler',color:'#ffa672ff',weeks:[1,4,7,10,16]},
+      {id:'WI',title:'Wizualizacja informacji',day:4,start:'11:15',end:'13:00',place:'EA AUD2',teacher:'dr inż. Jacek Lebiedź',color:'#7274ffff',weeks:[1,2,3,4,5,6,7,8]},
+      {id:'HD',title:'Hurtownie danych',day:4,start:'13:15',end:'15:00',place:'EA 436',teacher:'mgr inż. Aleksandra Nabożny',color:'#b472ffff',weeks:[1,2,3,4,5,6,7,8,9,10,11,12,16,17,18]},
 
-function isTimeSlotActive(timeRange) {
-  const [startStr, endStr] = timeRange.split(" - ");
-  const [startHour, startMinute] = startStr.split(":").map(Number);
-  const [endHour, endMinute] = endStr.split(":").map(Number);
-  const now = new Date();
-  // Create Date objects for today with the start and end times
-  const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute);
-  const adjustedStartTime = new Date(startTime.getTime() - 15 * 60000); // 15 minutes earlier
-  const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute);
-  return now >= adjustedStartTime && now < endTime;
-}
+      {id:'IO',title:'Inżynieria oprogramowania',day:5,start:'11:15',end:'13:00',place:'WP 121',teacher:'dr inż. Maciej Kucharski',color:'#b472ffff',weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
+      {id:'AUI',title:'Architektury usług internetowych',day:5,start:'13:15',end:'15:00',place:'NE AUD1P',teacher:'mgr inż. Michał Wójcik',color:'#7274ffff',weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
 
-function styleType(type, isGreyedOut) {
-  if (isGreyedOut) return `<span style="color:rgb(210, 210, 210);">[${type}]</span>`;
-  switch(type) {
-    case "W": return `<span style="color: white; background-color: blue; padding: 1px;">[W]</span>`;
-    case "L": return `<span style="color: white; background-color: purple; padding: 1px;">[L]</span>`;
-    case "Ć": return `<span style="color: black; background-color: pink; padding: 1px;">[Ć]</span>`;
-    case "P": return `<span style="color: black; background-color: orange; padding: 1px;">[P]</span>`;
-    default: return `<span>[${type}]</span>`;
-  }
-}
+      //special changes
+    //   {id:'SKL',title:'Sieci komputerowe - laboratorium',day:3,start:'11:15',end:'13:00',place:'EA 204',teacher:'mgr inż. Jakub Grochowski',color:'#b472ffff',weeks:[]},
+      {id:'AUI',title:'Architektury usług internetowych',day:3,start:'11:15',end:'13:00',place:'WP 111',teacher:'mgr Anna Domagalska',color:'#b472ffff',weeks:[7]},
+      {id:'ASW',title:'Aplikacje systemów wbudowanych',day:3,start:'13:15',end:'15:00',place:'EA 438',teacher:'dr inż. Krzysztof Bikonis',color:'#b472ffff',weeks:[7]},
+      {id:'BE',title:'Biznes elektroniczny',day:3,start:'15:15',end:'17:00',place:'NE AUD1L',teacher:'dr inż. Andrzej Sobecki',color:'#7274ffff',weeks:[7]},
+    //   {id:'BE',title:'Biznes elektroniczny',day:3,start:'17:15',end:'19:00',place:'WP 121',teacher:'dr inż. Andrzej Sobecki',color:'#ffa672ff',weeks:[]},
 
-// --- Widok desktopowy ---
-function buildDesktopTimetable() {
-  const desktopTable = document.getElementById("desktopTimetable");
-  desktopTable.innerHTML = "";
+    // {id:'SKL',title:'Sieci komputerowe - laboratorium',day:4,start:'11:15',end:'13:00',place:'EA 204',teacher:'mgr inż. Jakub Grochowski',color:'#b472ffff',weeks:[]},
+      {id:'AUI',title:'Architektury usług internetowych',day:4,start:'11:15',end:'13:00',place:'WP 111',teacher:'mgr Anna Domagalska',color:'#b472ffff',weeks:[15]},
+      {id:'ASW',title:'Aplikacje systemów wbudowanych',day:4,start:'13:15',end:'15:00',place:'EA 438',teacher:'dr inż. Krzysztof Bikonis',color:'#b472ffff',weeks:[15]},
+    //   {id:'BE',title:'Biznes elektroniczny',day:4,start:'17:15',end:'19:00',place:'WP 121',teacher:'dr inż. Andrzej Sobecki',color:'#ffa672ff',weeks:[]},
 
-  const mainHeader = document.createElement("tr");
-  const timeTh = document.createElement("th");
-  timeTh.rowSpan = 2;
-  mainHeader.appendChild(timeTh);
+      //holidays
+      {id:'XFR',title:'Dzień Wolny',day:1,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[1]},
+      {id:'XFR',title:'Dzień Wolny',day:2,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[1]},
+      {id:'XFR',title:'Dzień Wolny',day:5,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[5]},
+      {id:'XHL',title:'Święto Niepodległości',day:2,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[7]},
+      {id:'XFR',title:'Przerwa Świąteczno-Noworoczna',day:1,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[13,14]},
+      {id:'XFR',title:'Przerwa Świąteczno-Noworoczna',day:2,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[13,14]},
+      {id:'XHL',title:'Wigilia',day:3,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[13]},
+      {id:'XHL',title:'Boże Narodzenie',day:4,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[13]},
+      {id:'XHL',title:'Boże Narodzenie',day:5,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[13]},
+      {id:'XFR',title:'Sylwester',day:3,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[14]},
+      {id:'XHL',title:'Nowy Rok',day:4,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[14]},
+      {id:'XHL',title:'Przerwa Świąteczno-Noworoczna',day:5,start:'07:30',end:'22:00',place:'',teacher:'',color:'#818181ff',weeks:[14]},
+      {id:'XHL',title:'Święto Objawienia Pańskiego (Trzech Króli)',day:2,start:'07:30',end:'22:00',place:'',teacher:'',color:'#ff4a4aff',weeks:[15]}
+    ];
+    
 
-  timetable.forEach(dayObj => {
-    const dayTh = document.createElement("th");
-    dayTh.colSpan = 2;
-    dayTh.textContent = dayObj.day;
-    mainHeader.appendChild(dayTh);
-  });
-  desktopTable.appendChild(mainHeader);
+    const DAYS=['Poniedziałek','Wtorek','Środa','Czwartek','Piątek'];
+    const startHour = 7, endHour = 22, slotHeight = 36, minutesPerSlot = 30;
 
-  const subHeader = document.createElement("tr");
-  timetable.forEach(() => {
-    const aTh = document.createElement("th");
-    aTh.textContent = "A";
-    const bTh = document.createElement("th");
-    bTh.textContent = "B";
-    subHeader.appendChild(aTh);
-    subHeader.appendChild(bTh);
-  });
-  desktopTable.appendChild(subHeader);
+    // Elementy
+    const timetable = document.getElementById('timetable');
+    const timesCol = document.getElementById('timesCol');
+    const weekSelect = document.getElementById('weekSelect');
+    const daySelect = document.getElementById('daySelect');
+    const todayBtn = document.getElementById('todayBtn');
 
-  let timeSlotsSet = new Set();
-  timetable.forEach(dayObj => {
-    dayObj.classes.forEach(cls => timeSlotsSet.add(cls.time));
-  });
-  const timeSlots = Array.from(timeSlotsSet).sort();
+    function buildWeekSelect(){ weekSelect.innerHTML=''; for(let w=1; w<=SEMESTER_WEEKS; w++){ const {start,end} = weekDateRange(w); const opt = document.createElement('option'); opt.value = w; opt.textContent = `${w}. (${fmtDM(start)} - ${fmtDM(end)})`; weekSelect.appendChild(opt) } weekSelect.value = 1 }
+    function buildDaySelect(){ daySelect.innerHTML=''; for(let i=0;i<DAYS.length;i++){ const opt = document.createElement('option'); opt.value = i+1; opt.textContent = DAYS[i]; daySelect.appendChild(opt) } daySelect.value = 1 }
 
-  timeSlots.forEach(timeSlot => {
-    const row = document.createElement("tr");
-    const timeCell = document.createElement("td");
-    timeCell.textContent = formatTimeRange(timeSlot);
-    row.appendChild(timeCell);
+    // Zbuduj layout i nagłówki dni z datami (na podstawie aktualnie wybranego tygodnia)
+    function buildLayout(){
+      timesCol.innerHTML = '';
+      for(let h=startHour; h<endHour; h++){
+        const t1 = document.createElement('div'); t1.className='time-slot'; t1.textContent = `${String(h).padStart(2,'0')}:00`; t1.style.color = 'rgb(220,220,220)';
+        const t2 = document.createElement('div'); t2.className='time-slot'; t2.textContent = `${String(h).padStart(2,'0')}:30`; t2.style.color = 'rgb(110,110,110)';
+        timesCol.appendChild(t1); timesCol.appendChild(t2);
+      }
 
-    timetable.forEach(dayObj => {
-      const classes = dayObj.classes.filter(cls => cls.time === timeSlot);
-      let classesA = [];
-      let classesB = [];
-      let classesAB = [];
+      // usuń istniejące kolumny
+      Array.from(timetable.querySelectorAll('.day-col')).forEach(e=>e.remove());
 
-      classes.forEach(cls => {
-        const isGreyedOut = (cls.StartDate && cls.StartDate > todayDate.toISOString().split("T")[0]) ||
-                             (cls.EndDate && cls.EndDate < todayDate.toISOString().split("T")[0]);
-        let content = `${cls.room}<br>${styleType(cls.type, isGreyedOut)} <strong>${cls.subject}</strong><br>${cls.teacher}`;
-        if (cls.StartDate || cls.EndDate) {
-          let dateInfo = [];
-          if (cls.StartDate) dateInfo.push(`od ${cls.StartDate}`);
-          if (cls.EndDate) dateInfo.push(`do ${cls.EndDate}`);
-          content += `<br><em>${dateInfo.join(" | ")}</em>`;
-        }
-        if (isGreyedOut) content = `<span style="color:rgb(210, 210, 210);">${content}</span>`;
-        if (cls.week === "AB") {
-          classesAB.push(content);
-        } else if (cls.week === "A") {
-          classesA.push(content);
-        } else if (cls.week === "B") {
-          classesB.push(content);
-        }
+      const selectedWeek = Number(weekSelect.value) || 1;
+      const weekStart = new Date(SEMESTER_START);
+      weekStart.setDate(weekStart.getDate() + (selectedWeek-1)*7);
+
+      for(let d=0; d<DAYS.length; d++){
+        const col = document.createElement('div'); col.className = 'day-col'; col.dataset.day = (d+1);
+        const header = document.createElement('div'); header.className = 'day-header';
+        const dayDate = new Date(weekStart); dayDate.setDate(weekStart.getDate() + d);
+        header.textContent = `${DAYS[d]} ${fmtDM(dayDate)}`;
+        col.appendChild(header);
+
+        const rows = (endHour - startHour) * (60 / minutesPerSlot);
+        col.style.minHeight = (rows * slotHeight) + 'px';
+        timetable.appendChild(col);
+      }
+
+      const isMobile = window.matchMedia('(max-width:760px)').matches;
+      timetable.style.gridTemplateColumns = isMobile ? '60px 1fr' : `60px repeat(${DAYS.length},1fr)`;
+    }
+
+    function parseTime(t){ const [hh,mm] = t.split(':').map(Number); return hh*60 + mm }
+    function minutesToTop(mins){ return ((mins - startHour*60) / minutesPerSlot) * slotHeight }
+    function formatWeeks(arr){ if(!arr || !arr.length) return ''; const a = [...new Set(arr)].sort((x,y)=>x-y); const ranges = []; let s=a[0], e=a[0]; for(let i=1;i<a.length;i++){ const c=a[i]; if(c===e+1) e=c; else { ranges.push(s===e?String(s):`${s}-${e}`); s=e=c } } ranges.push(s===e?String(s):`${s}-${e}`); return ranges.join(',') }
+    function eventOccursInWeek(ev,w){ if(!ev.weeks) return true; return Array.isArray(ev.weeks) && ev.weeks.indexOf(w)!==-1 }
+
+    function clearRendered(){ const cols = timetable.querySelectorAll('.day-col'); cols.forEach(col=>{ Array.from(col.querySelectorAll('.event')).forEach(e=>e.remove()); Array.from(col.querySelectorAll('.now-line')).forEach(e=>e.remove()); }) }
+
+    function renderEvents(){
+      clearRendered();
+      const selectedWeek = Number(weekSelect.value);
+      const isMobile = window.matchMedia('(max-width:760px)').matches;
+      const selectedDayMobile = daySelect ? Number(daySelect.value) : null;
+
+      // ustaw grid odpowiednio do breakpointa
+      timetable.style.gridTemplateColumns = isMobile ? '60px 1fr' : `60px repeat(${DAYS.length},1fr)`;
+
+      // pokaż/ukryj kolumny (na mobile pokazujemy tylko wybrany dzień)
+      document.querySelectorAll('.day-col').forEach(col=>{
+        if(isMobile && selectedDayMobile){ col.style.display = (Number(col.dataset.day) === selectedDayMobile) ? 'block' : 'none'; }
+        else { col.style.display = 'block'; }
       });
 
-      // Inside buildDesktopTimetable() when processing each day for a given timeSlot
-if (classesAB.length > 0) {
-  const cell = document.createElement("td");
-  cell.colSpan = 2;
-  cell.innerHTML = classesAB.join("<br><br>");
-  // Highlight only if this cell belongs to today's day and the time slot is active
-  if (dayObj.day === currentDay && isTimeSlotActive(timeSlot)) {
-    cell.style.outline = "3px solid orange";
-  }
-  row.appendChild(cell);
-} else {
-  const cellA = document.createElement("td");
-  cellA.innerHTML = classesA.join("<br><br>") || "";
-  if (dayObj.day === currentDay && currentWeekLetter === "A" && isTimeSlotActive(timeSlot)) {
-    cellA.style.outline = "3px solid orange";
-  }
-  const cellB = document.createElement("td");
-  cellB.innerHTML = classesB.join("<br><br>") || "";
-  if (dayObj.day === currentDay && currentWeekLetter === "B" && isTimeSlotActive(timeSlot)) {
-    cellB.style.outline = "3px solid orange";
-  }
-  row.appendChild(cellA);
-  row.appendChild(cellB);
-}
+      for(const ev of EVENTS){
+        // filtr po tygodniu
+        if(!eventOccursInWeek(ev, selectedWeek)) continue;
+        if(isMobile && selectedDayMobile && Number(ev.day) !== selectedDayMobile) continue;
 
-    });
-    
-    desktopTable.appendChild(row);
-  });
-}
+        const dayCol = timetable.querySelector(`.day-col[data-day='${ev.day}']`);
+        if(!dayCol) continue;
 
-// --- Widok mobilny ---
-function buildMobileTimetable(selectedDay, selectedWeek) {
-  const mobileTable = document.getElementById("mobileTimetable");
-  mobileTable.innerHTML = "";
+        // UWAGA: przesuwamy kafelki symulując start/koniec +20 minut
+        const start = parseTime(ev.start) + 16; // +16 minut
+        const end = parseTime(ev.end) + 23; // +23 minut
+        const top = minutesToTop(start);
+        const height = Math.max(28, ((end - start) / minutesPerSlot) * slotHeight - 6);
 
-  const dayData = timetable.find(d => d.day === selectedDay);
-  if (!dayData) return;
+        const el = document.createElement('div');
+        el.className = 'event';
+        el.style.top = top + 'px';
+        el.style.height = height + 'px';
+        el.style.background = ev.color || '#60a5fa';
+        el.dataset.id = ev.id;
 
-  const headerRow = document.createElement("tr");
-  const thTime = document.createElement("th");
-  const thInfo = document.createElement("th");
-  thInfo.textContent = `${selectedDay} (Tydzień ${selectedWeek})`;
-  headerRow.appendChild(thTime);
-  headerRow.appendChild(thInfo);
-  mobileTable.appendChild(headerRow);
+        el.innerHTML = `
+          <div class="title">${escapeHtml(ev.title)}</div>
+          <div class="meta">${escapeHtml(ev.place || '')}${ev.teacher ? ' • ' + escapeHtml(ev.teacher) : ''}</div>
+          <div class="time">${ev.start} — ${ev.end}</div>
+          <div class="weeks">Tyg.: ${escapeHtml(formatWeeks(ev.weeks))}</div>
+        `;
 
-  let timeSlotsSet = new Set();
-  dayData.classes.forEach(cls => timeSlotsSet.add(cls.time));
-  const timeSlots = Array.from(timeSlotsSet).sort();
-
-  timeSlots.forEach(timeSlot => {
-    const row = document.createElement("tr");
-    const timeCell = document.createElement("td");
-    timeCell.textContent = formatTimeRange(timeSlot);
-    timeCell.style.minWidth = "100px";
-    row.appendChild(timeCell);
-
-    const classesAtTime = dayData.classes.filter(cls => {
-      return cls.time === timeSlot && (cls.week === "AB" || cls.week === selectedWeek);
-    });
-    let contentArray = [];
-    classesAtTime.forEach(cls => {
-      const isGreyedOut = (cls.StartDate && cls.StartDate > todayDate.toISOString().split("T")[0]) ||
-                           (cls.EndDate && cls.EndDate < todayDate.toISOString().split("T")[0]);
-      let content = `${cls.room}<br>${styleType(cls.type, isGreyedOut)} <strong>${cls.subject}</strong><br>${cls.teacher}`;
-      if (cls.StartDate || cls.EndDate) {
-        let dateInfo = [];
-        if (cls.StartDate) dateInfo.push(`od ${cls.StartDate}`);
-        if (cls.EndDate) dateInfo.push(`do ${cls.EndDate}`);
-        content += `<br><em>${dateInfo.join(" | ")}</em>`;
+        dayCol.appendChild(el);
       }
-      if (isGreyedOut) content = `<span style="color:rgb(210, 210, 210);">${content}</span>`;
-      contentArray.push(content);
-    });
-    const infoCell = document.createElement("td");
-    infoCell.innerHTML = contentArray.join("<br><br>");
-    row.appendChild(infoCell);
-  
-    // Inside buildMobileTimetable() after constructing a row for a given timeSlot:
-if (selectedDay === currentDay && selectedWeek == currentWeekLetter && isTimeSlotActive(timeSlot)) {
-  row.style.outline = "3px solid orange";
-}
-    mobileTable.appendChild(row);
-  });
-}
 
-// --- Aktualizacja tła selectów ---
-function updateSelectBackground(selectElement, currentValue) {
-  if (selectElement.value === currentValue) {
-    selectElement.style.backgroundColor = "lightgreen";
-  } else {
-    selectElement.style.backgroundColor = "";
-  }
-}
-
-// --- Inicjalizacja widoków ---
-
-buildDesktopTimetable();
-
-const daySelect = document.getElementById("daySelect");
-const weekSelect = document.getElementById("weekSelect");
-
-// Funkcja aktualizująca widok mobilny oraz tło selectów
-function updateMobileView() {
-  buildMobileTimetable(daySelect.value, weekSelect.value);
-  updateSelectBackground(daySelect, currentDay);
-  updateSelectBackground(weekSelect, currentWeekLetter);
-}
-
-function setMobileNav()
-{
-  if (currentDay == "Sobota" || currentDay == "Niedziela")
-  {
-    selectActualButton.innerText="Plan na najbliższy poniedziałek";
-    daySelect.value = "Poniedziałek";
-    if (currentWeekLetter == "A")
-    {
-      weekSelect.value = "B";
+      updateNowLine();
     }
-    else
-    {
-      weekSelect.value = "A";
+
+    function escapeHtml(s){ if(!s) return ''; return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;') }
+
+    // Plan na dzisiaj
+    function goToToday(){
+      const now = new Date();
+      const target = normalizeToStudyDay(now);
+      const weekNum = weekNumberForDate(target);
+      const dow = target.getDay();
+      const dayIndex = (dow >= 1 && dow <=5) ? dow : 1;
+
+      weekSelect.value = weekNum;
+      if(daySelect) daySelect.value = dayIndex;
+      buildLayout();
+      renderEvents();
+      window.scrollTo({top:0, behavior:'smooth'});
     }
-  }
-  else
-  {
-    daySelect.value = currentDay;
-    weekSelect.value = currentWeekLetter;
-  }
-}
 
-// Ustawienie nasłuchiwania zdarzeń
-daySelect.addEventListener("change", updateMobileView);
-weekSelect.addEventListener("change", updateMobileView);
+    // linia 'teraz' (pokazywana tylko w bieżącym tygodniu, a na mobile tylko w aktualnym dniu)
+    function updateNowLine(){
+      // usuń stare
+      document.querySelectorAll('.now-line').forEach(n=>n.remove());
+      const now = new Date();
+      const currentWeek = weekNumberForDate(now);
+      const selectedWeek = Number(weekSelect.value);
+      if(currentWeek !== selectedWeek) return; // tylko bieżący tydzień
 
-// Dodanie przycisku "Aktualny termin" do automatycznego ustawienia
-const selectActualButton = document.getElementById("selectActual");
-setMobileNav();
+      const minutes = now.getHours()*60 + now.getMinutes();
+      if(minutes < startHour*60 || minutes > endHour*60) return; // poza zakresem
+      const top = minutesToTop(minutes)+18;
 
-selectActualButton.addEventListener("click", () => {
-  setMobileNav();
-  updateMobileView();
-});
+      const isMobile = window.matchMedia('(max-width:760px)').matches;
+      const selectedDayMobile = daySelect ? Number(daySelect.value) : null;
 
-// Aktualizacja widoku mobilnego przy ładowaniu strony
-updateMobileView();
+      document.querySelectorAll('.day-col').forEach(col => {
+        const dayNum = Number(col.dataset.day);
+        if(isMobile && selectedDayMobile && dayNum !== selectedDayMobile) return;
+        const dow = new Date().getDay(); // 1..5
+        if(dayNum !== dow) return; // tylko aktualny dzień
+        const line = document.createElement('div');
+        line.className = 'now-line';
+        line.style.top = top + 'px';
+        col.appendChild(line);
+      });
+    }
+
+    // init
+    buildWeekSelect();
+    buildDaySelect();
+    buildLayout();
+    goToToday();
+
+    // listeners
+    weekSelect.addEventListener('change', () => { buildLayout(); renderEvents(); });
+    daySelect.addEventListener('change', renderEvents);
+    todayBtn.addEventListener('click', goToToday);
+    window.addEventListener('resize', () => { buildLayout(); requestAnimationFrame(renderEvents); });
+    setInterval(updateNowLine, 600);
