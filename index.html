@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
   <title>Plan zajęć PG — semestr piąty</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app">
@@ -13,13 +13,12 @@
       <h3>semestr piąty</h3>
     </header>
     <div class="controls">
-      <label class="small">Tydzień</label>
-      <select id="weekSelect" class="week-select"></select>
-      <label class="small">Dzień</label>
-      <select id="daySelect" class="day-select"></select>
+      <div style="width: 100%;"><label class="small">Tydzień</label>
+      <select id="weekSelect" class="week-select"></select></div>
+      <div style="width: 100%;"><label class="small">Dzień</label>
+      <select id="daySelect" class="day-select"></select></div>
       <button id="todayBtn" class="btn small">Plan na dzisiaj</button>
     </div>
-
     <main>
       <section class="timetable" id="timetable">
         <div class="times" id="timesCol"></div>
