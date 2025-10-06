@@ -23,6 +23,7 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"IO",title:"Inżynieria oprogramowania",day:5,start:"11:15",end:"13:00",place:"WP 121",teacher:"dr inż. Maciej Kucharski",color:"#b472ffff",weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
 {id:"AUI",title:"Architektury usług internetowych",day:5,start:"13:15",end:"15:00",place:"NE AUD1P",teacher:"mgr inż. Michał Wójcik",color:"#7274ffff",weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
 /*{id:"AUI",title:"Architektury usług internetowych",day:3,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[7]},*/
+{id:"AUI",title:"Architektury usług internetowych (przeniesione z 7 października)",day:2,start:"09:15",end:"11:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[3]},
 {id:"ASW",title:"Aplikacje systemów wbudowanych",day:3,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[7]},{id:"BE",title:"Biznes elektroniczny",day:3,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr inż. Andrzej Sobecki",color:"#7274ffff",weeks:[7]},
 {id:"BE",title:"Biznes elektroniczny",day:3,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[7]},
 {id:"AUI",title:"Architektury usług internetowych",day:4,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[15]},
