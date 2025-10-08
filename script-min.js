@@ -16,7 +16,7 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"SIP",title:"Systemy informacji przestrzennej",day:3,start:"13:15",end:"15:00",place:"EA 643",teacher:"dr hab. Zbigniew Łubniewski",color:"#b472ffff",weeks:[10,11,12,15,16,17,18]},
 {id:"SIP",title:"Systemy informacji przestrzennej",day:3,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr hab. Marcin Kulawiak",color:"#7274ffff",weeks:[1,2,3,4,5,6,8,9]},
 {id:"HD",title:"Hurtownie danych",day:3,start:"18:15",end:"20:00",place:"Zajęcia zdalne",teacher:"dr inż. Teresa Zawadzka",color:"#7274ffff",weeks:[1]},
-{id:"PG",title:"Projekt grupowy I",day:3,start:"19:15",end:"21:00",place:"NE 205",teacher:"dr inż. Krzysztof Gierłowski",color:"#ffa672ff",weeks:[2,3,4,5,6,8,9,10,11,12,15,16,17,18]},
+/*{id:"PG",title:"Projekt grupowy I",day:3,start:"19:15",end:"21:00",place:"NE 205",teacher:"dr inż. Krzysztof Gierłowski",color:"#ffa672ff",weeks:[2,3,4,5,6,8,9,10,11,12,15,16,17,18]},*/
 {id:"SAI",title:"Społeczne aspekty informatyki",day:4,start:"08:15",end:"11:00",place:"NE 209",teacher:"dr inż. Jakub Miler",color:"#ffa672ff",weeks:[2,6,16]},
 {id:"WI",title:"Wizualizacja informacji",day:4,start:"11:15",end:"13:00",place:"EA AUD2",teacher:"dr inż. Jacek Lebiedź",color:"#7274ffff",weeks:[1,2,3,4,5,6,7,8]},
 {id:"HD",title:"Hurtownie danych",day:4,start:"13:15",end:"15:00",place:"EA 436",teacher:"mgr inż. Aleksandra Nabożny",color:"#b472ffff",weeks:[2,3,4,5,6,7,8,9,10,11,12,16,17,18]},
