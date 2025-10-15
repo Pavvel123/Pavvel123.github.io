@@ -29,6 +29,7 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"AUI",title:"Architektury usług internetowych",day:4,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[15]},
 {id:"ASW",title:"Aplikacje systemów wbudowanych",day:4,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[15]},
 {id:"BE",title:"Biznes elektroniczny",day:4,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[15]},
+{id:"SAI",title:"Społeczne aspekty informatyki",day:3,start:"15:15",end:"18:00",place:"NE 105",teacher:"dr inż. Sławomir Ostrowski",color:"#ffa672ff",weeks:[11]},
 {id:"XEV",title:"ETIntegracja - Integracja wydziałowa",day:2,start:"17:15",end:"23:59",place:"Centrum Sportu Akademickiego",teacher:"",color:"#ffff00ff",weeks:[2]},
 {id:"XFR",title:"Dzień Wolny",day:1,start:"07:30",end:"22:00",place:"",teacher:"",color:"#818181ff",weeks:[1]},
 {id:"XFR",title:"Dzień Wolny",day:2,start:"07:30",end:"22:00",place:"",teacher:"",color:"#818181ff",weeks:[1]},
