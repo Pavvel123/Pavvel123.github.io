@@ -9,7 +9,7 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"AUI",title:"Architektury usług internetowych",day:2,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[4,6,9,11,17]},
 {id:"ASW",title:"Aplikacje systemów wbudowanych",day:2,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[3,4,5,6,8,9,10,11,12,16,17,18]},
 {id:"BE",title:"Biznes elektroniczny",day:2,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr inż. Andrzej Sobecki",color:"#7274ffff",weeks:[2,3,4,5,6,8,9]},
-{id:"BE",title:"Biznes elektroniczny",day:2,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[3,5,9,11,17]},
+{id:"BE",title:"Biznes elektroniczny",day:2,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[11,17]},
 {id:"WI",title:"Wizualizacja informacji",day:3,start:"08:15",end:"10:00",place:"EA 401",teacher:"mgr inż. Jerzy Redlarski",color:"#ffa672ff",weeks:[10,11,12,15,16,17,18]},
 {id:"JA",title:"Język angielski IV",day:3,start:"11:15",end:"12:45",place:"Gmach B 311",teacher:"mgr Ewa Rogala",color:"#ff2bedff",weeks:[1,2,3,4,5,6,8,9,10,11,12,15,16,17,18]},
 {id:"SAI",title:"Społeczne aspekty informatyki",day:3,start:"13:15",end:"15:00",place:"NE AUD1P",teacher:"dr inż. Jakub Miler",color:"#7274ffff",weeks:[1,2,3,4,5,6,8]},
@@ -18,14 +18,14 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"HD",title:"Hurtownie danych",day:3,start:"18:15",end:"20:00",place:"Zajęcia zdalne",teacher:"dr inż. Teresa Zawadzka",color:"#7274ffff",weeks:[1]},
 /*{id:"PG",title:"Projekt grupowy I",day:3,start:"19:15",end:"21:00",place:"NE 205",teacher:"dr inż. Krzysztof Gierłowski",color:"#ffa672ff",weeks:[2,3,4,5,6,8,9,10,11,12,15,16,17,18]},*/
 {id:"SAI",title:"Społeczne aspekty informatyki",day:4,start:"08:15",end:"11:00",place:"NE 209",teacher:"dr inż. Jakub Miler",color:"#ffa672ff",weeks:[2,6,16]},
-{id:"WI",title:"Wizualizacja informacji",day:4,start:"11:15",end:"13:00",place:"EA AUD2",teacher:"dr inż. Jacek Lebiedź",color:"#7274ffff",weeks:[1,2,3,4,5,6,7,8]},
+{id:"WI",title:"Wizualizacja informacji",day:4,start:"11:15",end:"13:00",place:"EA AUD2",teacher:"dr inż. Jacek Lebiedź",color:"#7274ffff",weeks:[1,2,3,4,5,6,7]},
 {id:"HD",title:"Hurtownie danych",day:4,start:"13:15",end:"15:00",place:"EA 436",teacher:"mgr inż. Aleksandra Nabożny",color:"#b472ffff",weeks:[2,3,4,5,6,7,8,9,10,11,12,16,17,18]},
 {id:"IO",title:"Inżynieria oprogramowania",day:5,start:"11:15",end:"13:00",place:"WP 121",teacher:"dr inż. Maciej Kucharski",color:"#b472ffff",weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
 {id:"AUI",title:"Architektury usług internetowych",day:5,start:"13:15",end:"15:00",place:"NE AUD1P",teacher:"mgr inż. Michał Wójcik",color:"#7274ffff",weeks:[1,2,3,4,6,7,8,9,10,11,12,15,16,17,18]},
 /*{id:"AUI",title:"Architektury usług internetowych",day:3,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[7]},*/
 {id:"AUI",title:"Architektury usług internetowych (przeniesione z 7 października)",day:2,start:"09:15",end:"11:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[3]},
-{id:"ASW",title:"Aplikacje systemów wbudowanych",day:3,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[7]},{id:"BE",title:"Biznes elektroniczny",day:3,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr inż. Andrzej Sobecki",color:"#7274ffff",weeks:[7]},
-{id:"BE",title:"Biznes elektroniczny",day:3,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[7]},
+{id:"ASW",title:"Aplikacje systemów wbudowanych",day:3,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[7]},{id:"BE",title:"Biznes elektroniczny",day:3,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr inż. Andrzej Sobecki",color:"#7274ffff",weeks:[7]},/*
+{id:"BE",title:"Biznes elektroniczny",day:3,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[7]},*/
 {id:"AUI",title:"Architektury usług internetowych",day:4,start:"11:15",end:"13:00",place:"WP 111",teacher:"mgr Anna Domagalska",color:"#b472ffff",weeks:[15]},
 {id:"ASW",title:"Aplikacje systemów wbudowanych",day:4,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[15]},
 {id:"BE",title:"Biznes elektroniczny",day:4,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[15]},
