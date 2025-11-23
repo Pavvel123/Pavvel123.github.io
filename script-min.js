@@ -10,7 +10,7 @@ const SEMESTER_START="2025-09-29",SEMESTER_WEEKS=21;function range(e,t,a=1){cons
 {id:"ASW",title:"Aplikacje systemów wbudowanych",day:2,start:"13:15",end:"15:00",place:"EA 438",teacher:"dr inż. Krzysztof Bikonis",color:"#b472ffff",weeks:[3,4,5,6,8,9,10,11,12,16,17,18]},
 {id:"BE",title:"Biznes elektroniczny",day:2,start:"15:15",end:"17:00",place:"NE AUD1L",teacher:"dr inż. Andrzej Sobecki",color:"#7274ffff",weeks:[2,3,4,5,6,8,9]},
 {id:"BE",title:"Biznes elektroniczny",day:2,start:"17:15",end:"19:00",place:"WP 121",teacher:"dr inż. Andrzej Sobecki",color:"#ffa672ff",weeks:[11,17]},
-{id:"WI",title:"Wizualizacja informacji",day:3,start:"08:15",end:"10:00",place:"EA 401",teacher:"mgr inż. Jerzy Redlarski",color:"#ffa672ff",weeks:[10,11,12,15,16,17,18]},
+{id:"WI",title:"Wizualizacja informacji",day:3,start:"08:15",end:"10:00",place:"EA 401",teacher:"mgr inż. Jerzy Redlarski",color:"#ffa672ff",weeks:[9,10,11,12,15,16,17]},
 {id:"JA",title:"Język angielski IV",day:3,start:"11:15",end:"12:45",place:"Gmach B 311",teacher:"mgr Ewa Rogala",color:"#ff2bedff",weeks:[1,2,3,4,5,6,8,9,10,11,12,15,16,17,18]},
 {id:"SAI",title:"Społeczne aspekty informatyki",day:3,start:"13:15",end:"15:00",place:"NE AUD1P",teacher:"dr inż. Jakub Miler",color:"#7274ffff",weeks:[1,2,3,4,5,6,8]},
 {id:"SIP",title:"Systemy informacji przestrzennej",day:3,start:"13:15",end:"15:00",place:"EA 643",teacher:"dr hab. Zbigniew Łubniewski",color:"#b472ffff",weeks:[10,11,12,15,16,17,18]},
