@@ -8,7 +8,7 @@ const SEMESTER_START="2026-02-23",SEMESTER_WEEKS=18,C_W="#55a2eb",C_C="#ef569d",
 {id:"ED",title:"Eksploracja danych",color:C_W,day:1,weeks:[1,2,3,4,5,6,8],start:"15:15",end:"17:00",place:"NE AUD2",teacher:"dr inż. Wojciech Waloszek"},
 {id:"ZFI",title:"Zarządzanie firmą informatyczną",color:C_P,day:1,weeks:[9,10,11,12,13,14,15,16],start:"15:15",end:"17:00",place:"NE 237",teacher:"dr inż. Paweł Jakóbczyk"},
 {id:"WZR",title:"Wirtualne zespoły robocze",color:C_L,day:1,weeks:[1,3,5,8,10,12,14,16],start:"17:15",end:"19:00",place:"EA 401",teacher:"dr inż. Jerzy Dembski"},
-{id:"ED",title:"Eksploracja danych",color:C_L,day:1,weeks:[1,3,5,8,10,12,14,16],start:"19:15",end:"21:00",place:"EA 401",teacher:"mgr inż. Dariusz Kobiela"},
+{id:"ED",title:"Eksploracja danych",color:C_L,day:1,weeks:[1,3,5,8,10,12,14,16],start:"19:15",end:"21:00",place:"WP 103",teacher:"mgr inż. Dariusz Kobiela"},
   
 {id:"PG",title:"Projekt grupowy II",color:C_P,day:2,weeks:[1,2,15,16],start:"08:15",end:"10:00",place:"NE AUD1L",teacher:"dr inż. Sławomir Gajewski"},
 {id:"ZBS",title:"Zarządzanie bezpieczeństwem sieci",color:C_W,day:2,weeks:[1,2,3,4,5,6,8],start:"10:15",end:"12:00",place:"NE AUD1P",teacher:"dr inż. Michał Hoeft"},
