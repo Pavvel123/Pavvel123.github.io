@@ -11,7 +11,7 @@ const SEMESTER_START="2026-02-23",SEMESTER_WEEKS=18,C_W="#55a2eb",C_C="#ef569d",
 {id:"ED",title:"Eksploracja danych",color:C_L,day:1,weeks:[2,11,13,15],start:"17:15",end:"19:00",place:"Zajęcia zdalne",teacher:"mgr inż. Dariusz Kobiela"},
   
 {id:"PG",title:"Projekt grupowy II",color:C_P,day:2,weeks:[2,15,16],start:"08:15",end:"10:00",place:"NE AUD1L",teacher:"dr inż. Sławomir Gajewski"},
-{id:"ZBS",title:"Zarządzanie bezpieczeństwem sieci",color:C_W,day:2,weeks:[1,2,3,4,5,6,8,9],start:"10:15",end:"12:00",place:"NE AUD1P",teacher:"dr inż. Michał Hoeft"},
+{id:"ZBS",title:"Zarządzanie bezpieczeństwem sieci",color:C_W,day:2,weeks:[1,2,3,4,6,8,9],start:"10:15",end:"12:00",place:"NE AUD1P",teacher:"dr inż. Michał Hoeft"},
 {id:"ZFI",title:"Zarządzanie firmą informatyczną",color:C_W,day:2,weeks:[10,11,12,13,14,15,16],start:"10:15",end:"12:00",place:"NE AUD1P",teacher:"dr inż. Paweł Jakóbczyk"},
 {id:"WZR",title:"Wirtualne zespoły robocze",color:C_W,day:2,weeks:[1,4,5,6,8,9,10,11,12,13,14,15,16],start:"12:15",end:"13:00",place:"EA AUD1",teacher:"prof. Bogdan Wiszniewski"},
 //{id:"SDI",title:"Seminarium dyplomowe inżynierskie I - zajęcia nieregularne",color:C_S,day:2,weeks:[1,2,3,4,5,6,8,9,10,11,12,13,14,15,16],start:"16:15",end:"19:00",place:"NE 310",teacher:"dr inż. Jarosław Kuchta"},
