@@ -2,8 +2,8 @@ const SEMESTER_START="2026-02-23",SEMESTER_WEEKS=18,C_W="#55a2eb",C_C="#ef569d",
 {id:"XBG",title:"Obowiązuje plan z piątku!",day:3,start:"07:30",end:"22:00",place:"",teacher:"",color:"#007413ff",weeks:[6]},//1.04
 
 {id:"RPI",title:"Realizacja projektu informatycznego",color:C_P,day:1,weeks:[2,4,9,11,13,15],start:"09:15",end:"11:00",place:"WP 122",teacher:"dr inż. Katarzyna Łukasiewicz"},
-{id:"TRP",title:"Technika radia programowalnego dla info - zajęcia wprowadzające",color:C_L,day:1,weeks:[10],start:"09:15",end:"11:00",place:"NE 209",teacher:"dr inż. Andrzej Marczak"},
-{id:"TRP",title:"Technika radia programowalnego dla info - przedmiot obieralny",color:C_L,day:1,weeks:[11,12,13,14,15,16],start:"09:15",end:"12:00",place:"EA 407",teacher:"dr inż. Andrzej Marczak"},
+{id:"TRP",title:"Technika radia programowalnego - zajęcia wprowadzające",color:C_L,day:1,weeks:[10],start:"09:15",end:"11:00",place:"NE 209",teacher:"dr inż. Andrzej Marczak"},
+{id:"TRP",title:"Technika radia programowalnego",color:C_L,day:1,weeks:[11,12,13,14,15,16],start:"09:15",end:"12:00",place:"EA 407",teacher:"dr inż. Andrzej Marczak"},
 //{id:"BW",title:"Bazy wiedzy",color:C_W,day:1,weeks:[3,5,6,8,9],start:"13:15",end:"15:00",place:"NE AUD2",teacher:"dr inż. Wojciech Waloszek"},
 //{id:"ED",title:"Eksploracja danych",color:C_W,day:1,weeks:[3,5,6,8,9],start:"15:15",end:"17:00",place:"NE AUD2",teacher:"dr inż. Wojciech Waloszek"},
 {id:"ZFI",title:"Zarządzanie firmą informatyczną",color:C_P,day:1,weeks:[10,11,12,13,14,15,16],start:"15:15",end:"17:00",place:"NE 237",teacher:"dr inż. Paweł Jakóbczyk"},
@@ -22,9 +22,9 @@ const SEMESTER_START="2026-02-23",SEMESTER_WEEKS=18,C_W="#55a2eb",C_C="#ef569d",
 {id:"KSR",title:"Komponentowe systemy rozproszone",color:C_L,day:3,weeks:[2,3,4,5,7,8,9,10,11,12,13,14,15,16],start:"13:15",end:"15:00",place:"WP 108",teacher:"mgr inż. Tomasz Goluch"},
 {id:"JO",title:"Jakość oprogramowania",color:C_P,day:3,weeks:[7],start:"16:15",end:"18:00",place:"Zajęcia zdalne",teacher:"dr inż. Adam Kaczmarek"},
 
-{id:"TRP",title:"Technika radia programowalnego dla info - przedmiot obieralny",color:C_L,day:4,weeks:[10,11,12,13,14,16],start:"11:15",end:"14:00",place:"EA 407",teacher:"dr inż. Andrzej Marczak"},
+//{id:"TRP",title:"Technika radia programowalnego dla info - przedmiot obieralny",color:C_L,day:4,weeks:[10,11,12,13,14,16],start:"11:15",end:"14:00",place:"EA 407",teacher:"dr inż. Andrzej Marczak"},
 {id:"RPI",title:"Realizacja projektu informatycznego",color:C_W,day:4,weeks:[1,2,3,4,5,6,7,8],start:"12:15",end:"14:00",place:"NE AUD1L",teacher:"dr inż. Jakub Miler"},
-{id:"TRP",title:"Technika radia programowalnego dla info - zajęcia wprowadzające",color:C_L,day:4,weeks:[9],start:"12:15",end:"14:00",place:"NE 206",teacher:"dr inż. Andrzej Marczak"},
+//{id:"TRP",title:"Technika radia programowalnego dla info - zajęcia wprowadzające",color:C_L,day:4,weeks:[9],start:"12:15",end:"14:00",place:"NE 206",teacher:"dr inż. Andrzej Marczak"},
 {id:"BSK",title:"Bezpieczeństwo systemów komputerowych",color:C_W,day:4,weeks:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,16],start:"14:15",end:"16:00",place:"EA AUD2",teacher:"dr inż. Piotr Rajchowski"},
 {id:"KSR",title:"Komponentowe systemy rozproszone",color:C_W,day:4,weeks:[1,2,3,4,5,7,8,9],start:"16:15",end:"18:00",place:"NE AUD1L",teacher:"dr inż. Krzysztof Manuszewski"},
 
